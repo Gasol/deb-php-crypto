@@ -1,0 +1,23 @@
+// $Id$
+// vim:ft=javascript
+
+ARG_WITH("crypto", "Crypto support", "no");
+
+if (PHP_CRYPTO != "no") {
+	if (ADD_EXTENSION_DEP('CRYPTO', 'OPENSSL')
+			&& CHECK_LIB("libeay32.lib", "crypto", PHP_CRYPTO)) {
+		AC_DEFINE("HAVE_CRYPTOLIB",1,"[Whether you want objective crypto binding]");
+		EXTENSION("crypto", "\
+			crypto.c \
+			crypto_object.c \
+			crypto_cipher.c \
+			crypto_hash.c \
+			crypto_kdf.c \
+			crypto_base64.c \
+			crypto_stream.c \
+			crypto_rand.c");
+	} else {
+		WARNING("crypto support can't be enabled, openssl is not enabled");
+		PHP_CRYPTO = "no";
+	}
+}
