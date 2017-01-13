@@ -1,0 +1,5 @@
+php5-crypto (0.3.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Gasol Wu <gasol.wu@gmail.com>  Fri, 13 Jan 2017 17:58:58 +0800
