@@ -1,22 +1,16 @@
-Source: php5-crypto
+Source: php-crypto
 Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), dh-php5, php5-dev, openssl
 Standards-Version: 3.9.5
-Section: libs
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://anonscm.debian.org/collab-maint/php5-crypto.git
-#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/php5-crypto.git;a=summary
+Section: php
+Homepage: https://pecl.php.net/package/crypto
+Vcs-Git: https://github.com/bukka/php-crypto.git
+Vcs-Browser: https://github.com/bukka/php-crypto
 
-Package: php5-crypto-dev
-Section: libdevel
-Architecture: any
-Depends: php5-cryptoBROKEN (= ${binary:Version}), ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
-
-Package: php5-cryptoBROKEN
-Architecture: any
+Package: php5-crypto
+Section: php
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Objective PHP binding of OpenSSL Crypto
+ This package provides an objective wrapper for OpenSSL Crypto Library
