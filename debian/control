@@ -1,14 +1,14 @@
 Source: php-crypto
 Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
-Build-Depends: debhelper (>= 9), dh-php5, php5-dev, openssl
+Build-Depends: debhelper (>= 9), dh-php, php5.6-dev, libssl-dev, pkgconf
 Standards-Version: 3.9.6
 Section: php
 Homepage: https://pecl.php.net/package/crypto
 Vcs-Git: https://github.com/bukka/php-crypto.git
 Vcs-Browser: https://github.com/bukka/php-crypto
 
-Package: php5-crypto
+Package: php5.6-crypto
 Section: php
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
